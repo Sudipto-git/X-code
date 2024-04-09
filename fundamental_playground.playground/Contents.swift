@@ -168,3 +168,79 @@ print("\(both)")
 
 
 print("Yahoo my xcode is now conected with github!!!")
+
+let n1 = [11,3,5,7]
+let isAny = n1.contains(7)
+print("\(String(describing: isAny))")
+
+//sets
+
+var sports = Set<String>()
+print("sports set = \(sports)")
+
+//add elemts to set
+sports.insert("soccer")
+sports.insert("Cricket")
+sports.insert("Badminton")
+print("sports = \(sports)")
+
+if sports.contains("soccer"){
+    print("True")
+}
+else{
+    print("False")
+}
+
+// rmeoving
+sports.remove("Cricket")
+print("sports now = \(sports.count)")
+
+sports =  ["baseball","hockey","chess","athlect"]
+print("sports now = \(sports) and ther are \(sports.count) number of sports")
+
+print("unsorted elements")
+for sport in sports {
+    print("sports are \(sport)")
+}
+//sorted and unsorted
+
+print("sorted elements")
+for sport in sports.sorted() {
+    print("sports are \(sport)")
+}
+
+
+// set operation
+//union, intersaction, substracting, symeetricdifference
+
+let oddNumbers : Set<Int> = [1,2,3,5,7,9,]
+let evenNumbers : Set<Int> = [2,4,6,8]
+let primeNumbers : Set<Int> = [1,3,5,7]
+
+
+let unionSet = oddNumbers.union(evenNumbers)
+for union in unionSet.sorted(){
+    print("union numbers are \(union)")
+}
+let intersection = oddNumbers.intersection(evenNumbers)
+print(intersection)
+
+let subtraction = oddNumbers.subtracting(primeNumbers)
+print(subtraction)
+
+let symmetricDifferences = primeNumbers.symmetricDifference(oddNumbers)
+print("symmetricDifferences are =\(symmetricDifferences)")
+
+//ssubset, super set,equality,struct subset,truct superset
+
+let isSubset = primeNumbers.isSubset(of: oddNumbers)
+print("is subset? = \(isSubset)")
+
+let isdisjoint = primeNumbers.isDisjoint(with: evenNumbers)
+print("isDisjoint = \(isdisjoint)")
+
+if primeNumbers == oddNumbers{
+    print("Two sets are equal")}
+else{
+    print("Not equal")
+}
