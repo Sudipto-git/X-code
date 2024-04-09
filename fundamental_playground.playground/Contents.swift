@@ -244,3 +244,9 @@ if primeNumbers == oddNumbers{
 else{
     print("Not equal")
 }
+let set1: Set<Int> = [1,3,4]
+let set2: Set<Int> = [1,3,4]
+let isStrictSuperset = set1.isStrictSuperset(of: set2)
+print("sets are equal = \(isStrictSuperset)")
+
+
