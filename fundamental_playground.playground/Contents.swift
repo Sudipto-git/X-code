@@ -250,3 +250,55 @@ let isStrictSuperset = set1.isStrictSuperset(of: set2)
 print("sets are equal = \(isStrictSuperset)")
 
 
+var fruits = Set<String>()
+
+fruits.insert("apple")
+fruits.insert("banana")
+
+print("now the set is \(fruits)")
+
+let set15 :Set<Int> = [1,2]
+
+if set15.contains(2){
+    print("True")
+}
+
+var ass :  Set<Int> = [2,3,4]
+ass.remove(2)
+print("ass is now :\(ass)")
+
+var a1 : Set<Int> = [1,2,3]
+let a2 : Set<Int> = [-1,-2,-3]
+
+a1.formUnion(a2)
+print("merge is \(a1)")
+
+
+var cityA : Set<String> = ["naogaon","ahmedabad"]
+var cityB : Set<String> = ["gandhinagar","mohadevpur","ahmedabad"]
+
+print("intersection is \(cityA.intersection(cityB))")
+
+let a4 : Set<Int> = [2,3,4]
+let a3 : Set<Int> = [4,5,6,4]
+print("\(a4.symmetricDifference(a3))")
+
+let seA : Set<Int> = [1,2,3,4]
+let seB : Set<Int> = [2,3,4]
+
+if seB.isSubset(of: seA){
+    print("True")
+}
+else{
+    print("False")
+}
+//dictionary
+
+var studentName : Dictionary<Int,String> = [:]
+var zipcodeDistrict : Dictionary<Int, String> = [:]
+zipcodeDistrict = [900 : "ahmedabad",800: "gandhinagar"]
+
+//access
+studentName[1] = "robart"
+print("student name = \(studentName)")
+print("zipcode = \(zipcodeDistrict)")
